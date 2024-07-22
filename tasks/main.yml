@@ -1,2 +1,22 @@
 ---
-# tasks file for ansible-nodejs
+- name: Install deps
+  apt:
+    name: curl
+    state: present
+    update_cache: true
+
+- name: Add NodeSource repository
+  command: curl -fsSL https://deb.nodesource.com/setup_{{ nodejs_version }}.x | sudo -E bash -
+
+- name: Install Node.js
+  apt:
+    name: nodejs
+    state: present
+
+- name: Verify Node.js installation
+  command: node -v
+  register: node_version
+
+- name: Display Node.js version
+  debug:
+    msg: "Node.js version installed: {{ node_version.stdout }}"
