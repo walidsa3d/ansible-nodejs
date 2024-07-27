@@ -2,7 +2,7 @@ Ansible-NodeJS
 =========
 An Ansible role to install nodejs on Ubuntu.
 ![Ansible Role](https://img.shields.io/ansible/role/d/walidsa3d/nodejs)
-![GitHub Actions Workflow Status](https://img.shields.io/github/actions/workflow/status/walidsa3d/nodejs/main.yml)
+![GitHub Actions Workflow Status](https://img.shields.io/github/actions/workflow/status/walidsa3d/ansible-nodejs/main.yml)
 
 Install
 ------------
