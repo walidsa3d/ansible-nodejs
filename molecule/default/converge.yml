@@ -3,6 +3,6 @@
   hosts: all
   gather_facts: true
   tasks:
-    - name: "Include role"
-      include_role:
+    - name: Include role
+      ansible.builtin.include_role:
         name: nodejs

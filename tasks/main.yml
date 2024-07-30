@@ -1,6 +1,6 @@
 ---
 - name: Install deps
-  apt:
+  ansible.builtin.apt:
     name: curl
     state: present
     update_cache: true
@@ -9,12 +9,12 @@
   shell: curl -fsSL https://deb.nodesource.com/setup_{{ nodejs_version }}.x | sudo -E bash -
 
 - name: Install Node.js
-  apt:
+  ansible.builtin.apt:
     name: nodejs
     state: present
 
 - name: Verify Node.js installation
-  command: node -v
+  ansible.builtin.command: node -v
   register: node_version
 
 - name: Display Node.js version
